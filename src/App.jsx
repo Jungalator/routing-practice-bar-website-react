@@ -1,12 +1,14 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import "./App.css";
+import React from "react";
+import MainLayout from "./layouts/MainLayout";
+import Home from "./pages/home";
 
 function App() {
   return (
-    <>
-      <h1>Vite + React</h1>
-    </>
+    <div className="w-[100%] h-[100%] min-w-[100vw] box-border">
+      <MainLayout>
+        <Home />
+      </MainLayout>
+    </div>
   );
 }
 
