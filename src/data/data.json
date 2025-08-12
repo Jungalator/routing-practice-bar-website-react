@@ -1,0 +1,36 @@
+[{ 
+    "id": 1,
+    "title": "Chapel Hill Shiraz",
+    "country": "AU",
+    "container":"Bottle",
+    "price": 56 
+},
+{ 
+    "id": 2,
+    "title": "Hoegaarden Rose",
+    "country": "AR",
+    "container":"Bottle",
+    "price": 59  
+},
+{ 
+    "id": 3,
+    "title": "Kruger Export",
+    "country": "FR",
+    "container":"750",
+    "price": 44 
+},
+{ 
+    "id": 4,
+    "title": "Rhino Pale Ale",
+    "country": "CA",
+    "container":"750",
+    "price": 31 
+},
+{ 
+    "id": 5,
+    "title": "Irish Guinness",
+    "country": "IE",
+    "container":"750",
+    "price": 26
+}
+]

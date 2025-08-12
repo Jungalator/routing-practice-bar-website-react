@@ -1,4 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+
 @import "tailwindcss";
+
+@theme {
+  --small-font: "Embed code";
+}
+
+@layer components {
+  .buttonText {
+    @apply text-amber-200 pt-1.5 brightness-77;
+  }
+}
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

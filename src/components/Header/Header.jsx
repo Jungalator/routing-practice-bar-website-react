@@ -1,18 +1,16 @@
+import Nav from "./Nav";
+
 export default function Header() {
-  const navLinkStyles = "text-white";
   return (
-    <header className="flex justify-end h-40 w-[100%] absolute">
-      <nav className="mr-25 w-[45%] flex justify-between items-center">
-        <a href="#" className="text-white text-md">
-          HOME
-        </a>
-        <a href="#" className={navLinkStyles}>
-          DRINKS
-        </a>
-        <a href="#" className={navLinkStyles}>
-          ABOUT US
-        </a>
-      </nav>
+    <header className=" px-25 flex justify-between h-30 w-[100%] absolute">
+      <img
+        src="images/barLogo.svg"
+        alt="Bar Logo"
+        width={105}
+        height={105}
+        className=" pt-4 "
+      />
+      <Nav />
     </header>
   );
 }
