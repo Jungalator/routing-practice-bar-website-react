@@ -1,10 +1,16 @@
 import { Link } from "react-router-dom";
 
-export default function LinkItem({ linkTo, nameLink }) {
-  const navLinkStyles = "text-neutral-400 text-xs font-semibold pt-8";
+export default function LinkItem({ linkTo, nameLink, linkId, page }) {
+  const navLinkStyles = "text-xs font-semibold hover:text-white duration-150";
   return (
-    <li className={navLinkStyles}>
-      <Link to={linkTo} className="hover:text-white duration-150">
+    <li className={`${page !== "/" ? "py-10" : "pt-7"}`}>
+      <Link
+        id={linkId}
+        to={linkTo}
+        className={`${navLinkStyles} ${
+          page === linkId ? `text-white` : `text-neutral-400`
+        }`}
+      >
         {nameLink}
       </Link>
     </li>

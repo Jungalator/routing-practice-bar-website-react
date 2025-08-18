@@ -7,7 +7,7 @@
 }
 
 @layer components {
-  .buttonText {
+  .accentColor {
     @apply text-amber-200 pt-1.5 brightness-77;
   }
 }
