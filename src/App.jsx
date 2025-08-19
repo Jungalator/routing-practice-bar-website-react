@@ -8,7 +8,7 @@ import SmallHunger from "./pages/SmallHunger";
 import NotFoundPage from "./pages/NotFoundPage";
 import data from "./data/data.json";
 import MenuItem from "./components/MenuItem";
-// import { handleSubmitTelegramForm } from "./utils/handleSubmitTelegramForm";
+import { fetchMessageToBot } from "./utils/fetchMessage";
 
 export default function App() {
   const location = useLocation();
@@ -26,34 +26,7 @@ export default function App() {
 
   function handleSubmitTelegramForm(e) {
     e.preventDefault();
-    const url = `https://api.telegram.org/bot8287961080:AAHKqL5z6SSFYKmx-sXsoJbrExVOCsNv518/sendMessage`;
-    const fetchMessageToBot = async () => {
-      try {
-        const response = await fetch(url, {
-          method: "POST",
-          headers: {
-            "Content-type": "application/json",
-          },
-          body: JSON.stringify({
-            chat_id: 6340616709,
-            text: message.email,
-          }),
-        });
-
-        if (response.ok) {
-          console.log("Сообщение отправлено");
-          setMessage((prev) => ({ ...prev, email: "" }));
-        } else {
-          console.log(
-            `Ошбика при отправке формы: ${response.status}, ${response.statusText}`
-          );
-        }
-      } catch (error) {
-        console.log(`Ошибка при отправке сообщения: ${error}`);
-      }
-    };
-
-    return fetchMessageToBot();
+    fetchMessageToBot(message, setMessage);
   }
 
   const listItems = data.map((item, index) => (
