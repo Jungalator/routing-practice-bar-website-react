@@ -16,7 +16,7 @@ export default async function handler(req, res) {
     });
     const { text } = body;
     const response = await fetch(
-      `https://api.telegram.org/bot${process.env.TELEGRAM_TOKEN}/sendMessage`,
+      `https://api.telegram.org/bot${process.env.VITE_TELEGRAM_TOKEN}/sendMessage`,
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
