@@ -9,7 +9,7 @@ const reactRoot = createRoot(rootElement);
 
 reactRoot.render(
   <StrictMode>
-    <BrowserRouter basename="/routing-practice-bar-website-react/">
+    <BrowserRouter basename="/">
       <App />
     </BrowserRouter>
   </StrictMode>
