@@ -6,7 +6,7 @@ import CenterImage from "./HeroSectionImages";
 export default function HomeHeroSection() {
   return (
     <>
-      <section className="bg-[url(images/backgroundPhoto.jpg)] text-center">
+      <section className="bg-[url(/images/backgroundPhoto.jpg)] text-center">
         <div className="bg-black/30">
           <BarName />
           <RightImage />

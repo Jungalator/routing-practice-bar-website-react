@@ -6,12 +6,12 @@ export const fetchMessageToBot = async (message, setMessage) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        text: message.email,
+        text: `New subscribe: ${message.email}`,
       }),
     });
     const data = await response.json();
     if (response.ok && data.ok) {
-      console.log("Сообщение отправлено: ", data.data);
+      console.log("Сообщение отправлено: ", data.result.text);
       setMessage((prev) => ({ ...prev, email: "" }));
     } else {
       console.log(

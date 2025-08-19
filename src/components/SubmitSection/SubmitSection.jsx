@@ -8,7 +8,7 @@ export default function SubmitSection({
   message,
 }) {
   return (
-    <section className="bg-[url(images/submitSectionBg.jpg)] pb-20 bg-cover">
+    <section className="bg-[url(/images/submitSectionBg.jpg)] pb-20 bg-cover">
       <LabelBorder />
       <SubmitText />
       <SubmitForm

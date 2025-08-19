@@ -3,7 +3,7 @@ import SectionHeroText from "./SectionHeroText/SectionHeroText";
 
 export default function SectionHero(props) {
   return (
-    <section className="bg-[url(images/backgroundPhoto.jpg)] h-[100vh]">
+    <section className="bg-[url(/images/backgroundPhoto.jpg)] h-[100vh]">
       <ul className="pt-60 px-25 h-[100vh] w-[100vw] bg-black/30 ">
         <SectionHeroText
           heroTextBig1={props.heroTextBig1}
