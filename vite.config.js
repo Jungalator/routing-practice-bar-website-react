@@ -14,5 +14,5 @@ export default defineConfig({
       },
     },
   },
-  base: "/routing-practice-bar-website-react/",
+  base: "/",
 });
