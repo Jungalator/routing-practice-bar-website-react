@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import MainLayout from "./layouts/MainLayout";
 import Home from "./pages/HomePage";
@@ -9,12 +9,15 @@ import NotFoundPage from "./pages/NotFoundPage";
 import data from "./data/data.json";
 import MenuItem from "./components/MenuItem";
 import { fetchMessageToBot } from "./utils/fetchMessage";
+import EventPage from "./pages/EventPage";
 
 export default function App() {
   const location = useLocation();
   const [localValue, setLocalValue] = useLocalStorage("linkPath", "");
   const [page, setPage] = useState(localValue || "/");
   const [message, setMessage] = useState({ email: "" });
+  const [eventItem, setEventItem] = useState({});
+  const eventRef = useRef(null);
 
   const handleChangeTelegramForm = (e) => {
     const { name, value } = e.target;
@@ -24,10 +27,15 @@ export default function App() {
     }));
   };
 
-  function handleSubmitTelegramForm(e) {
+  const handleSubmitTelegramForm = (e) => {
     e.preventDefault();
     fetchMessageToBot(message, setMessage);
-  }
+  };
+
+  // const handleTakeId = (eventObj) => {
+  //   setEventItem((prev) => ({ ...prev, ...eventObj }));
+  //   eventRef.current = eventObj;
+  // };
 
   const listItems = data.map((item, index) => (
     <MenuItem
@@ -38,6 +46,7 @@ export default function App() {
       key={index}
     />
   ));
+  // console.log(eventRef.current);
 
   useEffect(() => {
     setPage(location.pathname);
@@ -70,6 +79,7 @@ export default function App() {
             />
           }
         ></Route>
+        <Route path={`/event/:eventId`} element={<EventPage />}></Route>
         <Route path="*" element={<NotFoundPage />}></Route>
       </Route>
     </Routes>

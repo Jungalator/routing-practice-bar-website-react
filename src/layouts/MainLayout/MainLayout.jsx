@@ -6,7 +6,7 @@ export default function MainLayout({ page }) {
   return (
     <>
       <Header page={page} />
-      <main>
+      <main className="pt-30">
         <Outlet />
       </main>
       <Footer />

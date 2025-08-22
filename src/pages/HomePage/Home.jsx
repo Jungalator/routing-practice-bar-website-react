@@ -1,3 +1,4 @@
+import EventsSection from "./sections/EventsSection/EventsSection";
 import HomeHeroSection from "./sections/HeroSection";
 import PromoMenuSection from "./sections/PromoMenu";
 
@@ -35,6 +36,7 @@ export default function Home() {
         ]}
         menuName="MENU"
       />
+      <EventsSection />
     </>
   );
 }

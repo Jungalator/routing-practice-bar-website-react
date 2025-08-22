@@ -4,7 +4,7 @@ import PromoItmes from "./PromoItems/PromoItems";
 
 export default function PromoMenuSection(props) {
   return (
-    <section className=" w-[100vw] bg-black flex px-10 items-center relative">
+    <section className="mb-20 w-[100vw] bg-black flex px-10 items-center relative">
       <PromoDescription
         promoTitle={props.promoTitle}
         promoText={props.promoText}
