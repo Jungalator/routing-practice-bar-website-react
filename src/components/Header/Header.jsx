@@ -8,7 +8,7 @@ export default function Header({ page }) {
       }`}
     >
       <svg className="w-21.5 h-21.5 fill-white mt-4 ">
-        <use xlinkHref="favicon/sprites.svg#barLogo"></use>
+        <use xlinkHref="/favicon/sprites.svg#barLogo"></use>
       </svg>
       <Nav page={page} />
     </header>

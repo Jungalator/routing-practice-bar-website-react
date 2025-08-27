@@ -19,7 +19,7 @@ export default function EventsItem({ item, itemRef, itemCount }) {
       <p className="mb-2 text-sm text-neutral-400">{item.preText}</p>
       <Link
         ref={item}
-        to={`/event/${item.id}`}
+        to={`event/${item.id}`}
         className="text-amber-200 brightness-77 tracking-widest"
       >
         READ MORE

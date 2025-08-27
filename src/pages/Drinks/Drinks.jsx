@@ -2,12 +2,7 @@ import SectionHero from "../../components/SectionHero/SectionHero";
 import SubmitSection from "../../components/SubmitSection";
 import DrinksList from "./sections/DrinksList/DrinksList";
 
-export default function Drinks({
-  listItems,
-  handleChangeTelegramForm,
-  handleSubmitTelegramForm,
-  message,
-}) {
+export default function Drinks(props) {
   return (
     <>
       <SectionHero
@@ -16,7 +11,7 @@ export default function Drinks({
         heroTextSmall="Would you like to enjoy an extensive drinks menu in Zelzate and the surrounding area? Then look no further, because Café Regina is the place to be! You will find many different drinks here, so you will certainly find something you will like. So be sure to visit the store or contact us!"
       />
       <DrinksList
-        listItems={listItems}
+        listItems={props.listItems}
         menuTitle="Weekend Suggestion"
         menuText=" During the weekend at Café Regina you can treat yourself to a delicious
         hot meal that is prepared with a lot of care and love. Our chef gets to
@@ -24,9 +19,9 @@ export default function Drinks({
         taste buds. So be sure to drop by or contact this business!"
       />
       <SubmitSection
-        handleChangeTelegramForm={handleChangeTelegramForm}
-        handleSubmitTelegramForm={handleSubmitTelegramForm}
-        message={message}
+        handleChangeTelegramForm={props.handleChangeTelegramForm}
+        handleSubmitTelegramForm={props.handleSubmitTelegramForm}
+        message={props.message}
       />
     </>
   );

@@ -2,7 +2,7 @@ export default function Button({ style, handleClick, direction }) {
   return (
     <>
       <button
-        className={`${style} w-21 h-9 cursor-pointer `}
+        className={`${style} w-21 h-9 cursor-pointer`}
         onClick={handleClick}
       >
         <div className={`${direction} relative w-24 `}>
